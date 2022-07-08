@@ -17,7 +17,7 @@ export const getLink = (dataFromTextArea) => {
       .then(async (response) => {
          var data = await response.json();
          console.log(data)
-         window.location.href = "/lol";
+         window.location.href = `/${data.url}`;
       })
       .catch((err) => console.log(err));
   }else{
