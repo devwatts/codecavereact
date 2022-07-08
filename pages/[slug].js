@@ -31,7 +31,7 @@ export default function Code() {
           <span className="mt-[20px] text-center text-white bg-[#111111]/[0.40] p-[20px] lg:w-[70%] rounded-lg">Here is the output for your code!<br/>Share it via: <br /></span>
 
       </div>
-      <div className="w-[95%] m-auto">{data==''?'':parse(data.data.code.formatted_html)}</div>
+      <div className="w-[95%] m-auto">{data==''||data.status =="No data found for link"?'':parse(data.data.code.formatted_html)}</div>
     </div>
       )
 }
