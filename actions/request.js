@@ -4,21 +4,25 @@ const API = 'https://newcodecave.herokuapp.com'
 //const API = 'http://localhost:5000';
 
 export const getLink = (dataFromTextArea) => {
-  var data = {
-    raw_code:dataFromTextArea
-  }
-  console.log(dataFromTextArea)
-  return fetch(`${API}/addCode`,{
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data)
-  })
-    .then(async (response) => {
-       var data = await response.json();
-       console.log(data)
-       Router.push(`/${data.url}`);
+  if(dataFromTextArea.length != 0){
+    var data = {
+      raw_code:dataFromTextArea
+    }
+    console.log(dataFromTextArea)
+    return fetch(`${API}/addCode`,{
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
     })
-    .catch((err) => console.log(err));
+      .then(async (response) => {
+         var data = await response.json();
+         console.log(data)
+         Router.push(`/${data.url}`);
+      })
+      .catch((err) => console.log(err));
+  }else{
+    alert('Please enter the code!!');
+  }
 };
 
 
