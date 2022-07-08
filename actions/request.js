@@ -17,7 +17,7 @@ export const getLink = (dataFromTextArea) => {
       .then(async (response) => {
          var data = await response.json();
          console.log(data)
-         Router.push(`/${data.url}`);
+         window.location.href = "https://google.com/about";
       })
       .catch((err) => console.log(err));
   }else{
