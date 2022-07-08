@@ -1,5 +1,4 @@
 import fetch from "isomorphic-fetch";
-import Router from "next/dist/client/router";
 const API = 'https://newcodecave.herokuapp.com'
 //const API = 'http://localhost:5000';
 
@@ -36,3 +35,14 @@ export const getData = async (id) => {
     })
     .catch((err) => console.log(err));
 };
+
+export const wakeApp = async () => {
+  return fetch(`${API}`,{
+    method: 'GET',
+    headers: { 'Content-Type': 'application/json' }
+  })
+    .then(async (response) => {
+      return response;
+    })
+    .catch((err) => console.log(err));
+}
