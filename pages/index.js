@@ -1,5 +1,5 @@
-import ParticleBackground from "./components/particles";
-import CodeArea from "./components/codeArea";
+import ParticleBackground from "../components/particles";
+import CodeArea from "../components/codeArea";
 import Head from "next/head";
 
 export default function Home() {

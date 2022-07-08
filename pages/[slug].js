@@ -1,8 +1,8 @@
-import ParticleBackground from "./components/particles";
+import ParticleBackground from "../components/particles";
 import Head from "next/head";
 import { useRouter } from "next/dist/client/router";
 import { useEffect,useState } from "react";
-import { getData } from "./actions/request";
+import { getData } from "../actions/request";
 import parse from 'html-react-parser';
 
 export default function Code() {
