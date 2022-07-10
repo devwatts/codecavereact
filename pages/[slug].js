@@ -16,11 +16,23 @@ export default function Code() {
     if(id != undefined){
       const fetchCode = async () =>{
         setData(await getData(id));
-        setLoading(false);
       }
       fetchCode();
     }
   },[id]);
+
+  useEffect(() => {
+     if(data != ""){
+        if(data.status != "No data found for link"){
+          setLoading(false);
+        }else{
+          alert('No code found on this link!! \n Redirecting you to the homepage!');
+          window.location.href = '/';
+        }
+     } 
+  },[data]);
+
+
   return (
     <div>
       <Head>
