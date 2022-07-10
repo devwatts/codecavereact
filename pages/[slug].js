@@ -5,6 +5,8 @@ import { useEffect,useState } from "react";
 import { getData } from "../actions/request";
 import parse from 'html-react-parser';
 import LoadingScreen from "../components/loader";
+import Image from "next/image";
+import {copyToClipboard} from '../helpers/copyToClipboard'
 
 export default function Code() {
   const [loading,setLoading] = useState(true);
@@ -47,6 +49,9 @@ export default function Code() {
               Here is the output for your code!<br/>Share it via: <br />
               <div className="link"><a className="text-[#7e69ff]" href={`https://code.devwatts.engineer/${id}`}>code.devwatts.engineer/{id}</a></div>
           </span>
+      </div>
+      <div onClick={() => {copyToClipboard(data)}} className="bg-[#1f1f1f] w-[95%] m-auto flex justify-end pt-[10px] pr-[10px]">
+        <Image className="cursor-pointer" src={'/copy.png'} height={'30px'} width={'30px'}></Image>
       </div>
       <div className="w-[95%] m-auto">{data==''||data.status =="No data found for link"?'':parse(data.data.code.formatted_html)}</div>
     </div>

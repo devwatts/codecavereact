@@ -1,6 +1,6 @@
 import fetch from "isomorphic-fetch";
-const API = 'https://newcodecave.herokuapp.com'
-//const API = 'http://localhost:5000';
+//const API = 'https://newcodecave.herokuapp.com'
+const API = 'http://localhost:5000';
 
 export const getLink = (dataFromTextArea) => {
   if(dataFromTextArea.length != 0){
