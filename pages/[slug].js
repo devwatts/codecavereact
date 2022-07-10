@@ -32,7 +32,10 @@ export default function Code() {
       <LoadingScreen loading={loading}></LoadingScreen>
       <div className="flex flex-col items-center  mb-[50px] mt-[50px]">
           <span className="text-white text-center text-[35px] font-bold">Code Cave</span>
-          <span className="mt-[20px] text-center text-white bg-[#111111]/[0.40] p-[20px] lg:w-[70%] rounded-lg">Here is the output for your code!<br/>Share it via: <br /></span>
+          <span className="mt-[20px] text-center text-white bg-[#111111]/[0.40] p-[20px] lg:w-[70%] rounded-lg">
+              Here is the output for your code!<br/>Share it via: <br />
+          </span>
+          
       </div>
       <div className="w-[95%] m-auto">{data==''||data.status =="No data found for link"?'':parse(data.data.code.formatted_html)}</div>
     </div>

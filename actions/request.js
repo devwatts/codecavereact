@@ -15,7 +15,7 @@ export const getLink = (dataFromTextArea) => {
     })
       .then(async (response) => {
          var data = await response.json();
-         console.log(data)
+         //console.log(data)
          window.location.href = `/${data.url}`;
       })
       .catch((err) => console.log(err));
@@ -33,7 +33,10 @@ export const getData = async (id) => {
     .then(async (response) => {
       return await response.json();
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      window.location.href = `/`
+      console.log(err)
+    });
 };
 
 export const wakeApp = async () => {
