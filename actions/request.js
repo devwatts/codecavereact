@@ -2,12 +2,13 @@ import fetch from "isomorphic-fetch";
 const API = 'https://newcodecave.herokuapp.com'
 //const API = 'http://localhost:5000';
 
-export const getLink = (dataFromTextArea) => {
+export const getLink = (dataFromTextArea,loadingFunction) => {
   if(dataFromTextArea.length != 0){
+    loadingFunction(true);
     var data = {
       raw_code:dataFromTextArea
     }
-    console.log(dataFromTextArea)
+    //console.log(dataFromTextArea)
     return fetch(`${API}/addCode`,{
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

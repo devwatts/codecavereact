@@ -12,7 +12,7 @@ export default function CodeArea(props){
             <div className="circle"></div>
         </div>
             <textarea ref={inputRef} className="w-[calc(100%-20px)] lg:w-[700px] border-0 outline-0 rounded-sm p-[20px]" placeholder="Enter the code here" rows={8}></textarea>
-            <button onClick={() => {getLink(inputRef.current.value);props.loadingFunction(true);}} className="bg-white text-[20px] m-[10px] w-fit rounded-md p-[10px]">Get Link!</button>
+            <button onClick={() => {getLink(inputRef.current.value,props.loadingFunction);}} className="bg-white text-[20px] m-[10px] w-fit rounded-md p-[10px]">Get Link!</button>
         </div>
     );
 }
