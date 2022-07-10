@@ -21,7 +21,6 @@ export default function Code() {
       fetchCode();
     }
   },[id]);
-
   return (
     <div>
       <Head>
@@ -34,8 +33,8 @@ export default function Code() {
           <span className="text-white text-center text-[35px] font-bold">Code Cave</span>
           <span className="mt-[20px] text-center text-white bg-[#111111]/[0.40] p-[20px] lg:w-[70%] rounded-lg">
               Here is the output for your code!<br/>Share it via: <br />
+              <div className="link"><a className="text-[#7e69ff]" href={`https://code.devwatts.engineer/${id}`}>code.devwatts.engineer/{id}</a></div>
           </span>
-          
       </div>
       <div className="w-[95%] m-auto">{data==''||data.status =="No data found for link"?'':parse(data.data.code.formatted_html)}</div>
     </div>
