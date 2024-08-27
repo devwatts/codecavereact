@@ -54,7 +54,7 @@ export default function Code() {
           <span className="mt-[20px] text-center text-white bg-[#111111]/[0.40] p-[20px] lg:w-[70%] rounded-lg">
               Here is the output for your code!<br/>Share it via: <br />
               <div className="link">
-                  <a className="text-[#7e69ff]" href={`https://code.devwatts.engineer/${id}`}>code.devwatts.engineer/{id}</a>
+                  <a className="text-[#7e69ff]" href={`https://codecave.devwatts.xyz/${id}`}>codecave.devwatts.xyz/{id}</a>
               </div>
           </span>
       </div>
