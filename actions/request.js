@@ -1,5 +1,5 @@
 import fetch from "isomorphic-fetch";
-const API = 'https://codecave.devwatts.xyz'
+const API = 'https://codecaveapi.devwatts.xyz'
 //const API = 'http://localhost:5000';
 
 export const getLink = (dataFromTextArea,loadingFunction) => {
